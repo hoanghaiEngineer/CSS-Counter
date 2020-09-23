@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<style type="text/css">
+			body{
+				counter-reset: section;
+			}
+			
+			h1{
+				counter-reset: subsection;
+			}
+			
+			h1:before{
+				counter-increment: section;
+				content: "Notice " Counter(section) ". ";
+			}
+			
+			h2:before{
+				counter-increment: subsection;
+				content: "* " Counter(subsection) ". ";
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS Counter Properties</h1>
+		<h2>Content: Used with the ::before and ::after pseudo-elements, to insert generated content.</h2>
+		<h2>Counter-increment: Increments one or more counter values</h2>
+		<h2>Counter-reset: Creates or resets one or more counters</h2>
+		<!-- 
+			The display when we run website on browser like:
+				Notice 1. CSS Counter Properties
+				* 1. Content: Used with the ::before and ::after pseudo-elements, to insert generated content.
+				* 2. Counter-increment: Increments one or more counter values.
+				* 3. Counter-reset: Creates or resets one or more counters
+		-->
+	</body>
+</html>
